@@ -8,7 +8,7 @@
   var ctx = canvas.getContext("2d");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var GREEN = "74, 222, 128";
-  var BLUE = "58, 141, 199";
+  var AMBER = "246, 180, 67";
   var MEET_DISTANCE = 150;
 
   var width = 0;
@@ -92,10 +92,7 @@
       var p = pairs[k];
 
       // tether
-      var g = ctx.createLinearGradient(p.px, p.py, p.ax, p.ay);
-      g.addColorStop(0, "rgba(" + BLUE + ", 0.9)");
-      g.addColorStop(1, "rgba(" + GREEN + ", 0.9)");
-      ctx.strokeStyle = g;
+      ctx.strokeStyle = "rgba(" + AMBER + ", 0.85)";
       ctx.lineWidth = 1.5;
       ctx.beginPath();
       ctx.moveTo(p.px, p.py);

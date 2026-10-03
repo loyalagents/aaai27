@@ -1,6 +1,6 @@
 /* Loyal Agents workshop at AAAI-27
-   Palette follows loyalagents.org: near-black ink, light gray paper,
-   and a green-to-blue gradient accent. */
+   Near-black ink and light gray paper, with green for agents and
+   amber as the workshop's own accent. */
 
 :root {
   --ink: #1b1b1b;
@@ -14,8 +14,8 @@
   --line-on-light: rgba(27, 27, 27, 0.14);
   --green: #4ade80;
   --green-deep: #02ad4d;
-  --blue: #3a8dc7;
-  --grad: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
+  --amber: #f6b443;
+  --amber-deep: #7a4406;
   --sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --radius: 20px;
@@ -23,7 +23,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 
 body {
   margin: 0;
@@ -50,28 +50,25 @@ a { color: inherit; }
 
 .nav {
   position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  width: calc(100% - 24px);
-  max-width: 1180px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 10px 12px 10px 28px;
-  border-radius: 999px;
-  background: rgba(27, 27, 27, 0.8);
-  border: 1px solid var(--line-on-dark);
+  padding: 14px max(24px, calc((100% - 1180px) / 2 + 24px));
+  background: rgba(27, 27, 27, 0.86);
+  border-bottom: 1px solid var(--line-on-dark);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-brand {
   font-weight: 700;
-  font-size: 22px;
-  letter-spacing: -0.02em;
+  font-size: 19px;
+  letter-spacing: -0.01em;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -80,7 +77,7 @@ a { color: inherit; }
   margin-left: 10px;
   padding: 3px 8px;
   border: 1px solid var(--line-on-dark);
-  border-radius: 999px;
+  border-radius: 4px;
   font-family: var(--mono);
   font-size: 11px;
   font-weight: 500;
@@ -103,19 +100,20 @@ a { color: inherit; }
 .nav-links a:hover { color: var(--green); }
 
 .nav-cta {
-  padding: 9px 22px;
-  border-radius: 999px;
-  background: var(--grad);
+  padding: 9px 18px;
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--ink);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  transition: color 0.2s, opacity 0.2s;
+  transition: background 0.2s;
 }
 
-.nav-cta:hover { color: var(--ink); opacity: 0.92; }
+.nav-cta:hover { background: var(--white); }
 
 /* ---------- Hero ---------- */
 
@@ -171,12 +169,7 @@ h1 {
   letter-spacing: -0.04em;
 }
 
-.grad {
-  background: var(--grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+.accent { color: var(--amber); }
 
 .hero-sub {
   max-width: 34em;
@@ -193,55 +186,29 @@ h1 {
   margin-top: 36px;
 }
 
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 22px;
-  border: 1px solid rgba(74, 222, 128, 0.5);
-  border-radius: 999px;
-  background: rgba(74, 222, 128, 0.08);
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-a.status-pill:hover { background: rgba(74, 222, 128, 0.18); }
-
-.status-pill.on-light {
-  border-color: var(--green-deep);
-  background: rgba(2, 173, 77, 0.08);
+.status {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 1px solid var(--line-on-dark);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+a.status:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--white); }
+
+.status.on-light {
   padding: 7px 14px;
-}
-
-.pulse {
-  position: relative;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--green);
-}
-
-.on-light .pulse { background: var(--green-deep); }
-
-.pulse::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: inherit;
-  animation: pulse 2s ease-out infinite;
-}
-
-@keyframes pulse {
-  from { transform: scale(1); opacity: 0.7; }
-  to { transform: scale(3.2); opacity: 0; }
+  border-color: var(--line-on-light);
+  background: transparent;
+  font-size: 13px;
+  letter-spacing: 0.1em;
 }
 
 .text-link {
@@ -290,7 +257,7 @@ a.status-pill:hover { background: rgba(74, 222, 128, 0.18); }
 .legend span { display: inline-block; margin-left: 10px; }
 .lg-ring { width: 10px; height: 10px; border: 1.5px solid var(--white); border-radius: 50%; }
 .lg-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; }
-.lg-line { width: 22px; height: 2px; background: var(--grad); }
+.lg-line { width: 22px; height: 2px; background: var(--amber); }
 
 /* ---------- Sections ---------- */
 
@@ -353,7 +320,7 @@ h3 { font-size: 20px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--grad);
+  background: var(--amber);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
@@ -380,7 +347,7 @@ h3 { font-size: 20px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01
   display: inline-block;
   padding: 4px 12px;
   border: 1px solid var(--line-on-light);
-  border-radius: 999px;
+  border-radius: 4px;
   font-family: var(--mono);
   font-size: 11px;
   font-weight: 500;
@@ -392,9 +359,9 @@ h3 { font-size: 20px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01
 
 .tag-draft { border-color: var(--ink); color: var(--ink); }
 .tag-talk { border-color: transparent; background: var(--ink); color: var(--white); }
-.tag-papers { border-color: transparent; background: rgba(58, 141, 199, 0.16); color: #1d5f8f; }
+.tag-papers { border-color: transparent; background: rgba(246, 180, 67, 0.26); color: var(--amber-deep); }
 .tag-panel { border-color: transparent; background: rgba(2, 173, 77, 0.16); color: #046b32; }
-.tag-breakout { border-color: transparent; background: var(--grad); color: var(--ink); }
+.tag-breakout { border-color: transparent; background: var(--amber); color: var(--ink); }
 
 .agenda { margin-top: 48px; border-top: 1px solid var(--ink); }
 
@@ -448,11 +415,23 @@ h3 { font-size: 20px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01
   height: 64px;
   margin-bottom: 24px;
   border-radius: 50%;
-  background: var(--grad);
+  background: var(--green);
   color: var(--ink);
   font-weight: 700;
   font-size: 20px;
   letter-spacing: -0.02em;
+}
+
+.photo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 24px;
+  padding: 3px;
+  border-radius: 50%;
+  background: var(--green);
+  object-fit: cover;
+  object-position: center top;
 }
 
 .avatar.ghost {
@@ -500,7 +479,7 @@ h3 { font-size: 20px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01
   top: 10px;
   bottom: 10px;
   width: 2px;
-  background: var(--grad);
+  background: var(--ink-3);
 }
 
 .dates li { position: relative; padding-bottom: 22px; }
@@ -534,6 +513,7 @@ h3 { font-size: 20px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01
 .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; }
 .footer-brand { margin-bottom: 10px; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: var(--white); }
 .footer p { max-width: 30em; }
+.footer .footer-note { margin-top: 14px; }
 
 .footer h3 {
   margin-bottom: 10px;
@@ -564,10 +544,10 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; border-r
 
 @media (max-width: 680px) {
   body { font-size: 17px; }
-  .nav { top: 12px; padding: 8px 8px 8px 20px; }
-  .nav-brand { font-size: 19px; }
+  .nav { padding: 10px 16px; gap: 12px; }
+  .nav-brand { font-size: 16px; }
   .nav-brand-tag { display: none; }
-  .nav-cta { padding: 8px 16px; font-size: 12px; }
+  .nav-cta { padding: 8px 12px; font-size: 12px; }
   .section { padding: 80px 0; }
   .hero-inner { padding-top: 120px; padding-bottom: 80px; }
   .hero-shade {
@@ -586,6 +566,5 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; border-r
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .pulse::after { animation: none; }
   .topics li::before { transition: none; }
 }
