@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loyal Agents Workshop at AAAI-27</title>
+  <meta name="description" content="Who Does Your AI Agent Work For? A one-day AAAI-27 workshop on building, measuring, and governing AI agents that stay loyal to the people they represent. Montréal, February 2027.">
+  <meta property="og:title" content="Who Does Your AI Agent Work For? A Workshop on Loyal Agents">
+  <meta property="og:description" content="A one-day AAAI-27 workshop in Montréal, February 2027. Call for papers coming soon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://loyalagents.github.io/aaai27/">
+  <meta name="theme-color" content="#1b1b1b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a class="nav-brand" href="#top">LoyalAgents<span class="nav-brand-tag">AAAI-27</span></a>
+    <nav aria-label="Page sections">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#topics">Topics</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#cfp">Call for papers</a>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <canvas class="hero-canvas" id="tethers" aria-hidden="true"></canvas>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow">AAAI-27 Workshop <span class="sep">/</span> Montréal, Canada <span class="sep">/</span> February 2027</p>
+        <h1>Who does your AI agent <span class="grad">work for?</span></h1>
+        <p class="hero-sub">A workshop on loyal agents: how to build, measure, and govern AI agents that stay faithful to the people they represent.</p>
+        <div class="hero-actions">
+          <a class="status-pill" href="#cfp"><span class="pulse" aria-hidden="true"></span>Call for papers coming soon</a>
+          <a class="text-link" href="#agenda">See the draft agenda <span aria-hidden="true">→</span></a>
+        </div>
+        <dl class="facts">
+          <div><dt>When</dt><dd>February 22 or 23, 2027</dd></div>
+          <div><dt>Where</dt><dd>Montréal, Canada</dd></div>
+          <div><dt>Format</dt><dd>One day, in person</dd></div>
+          <div><dt>Part of</dt><dd>AAAI-27</dd></div>
+        </dl>
+      </div>
+      <p class="legend" aria-hidden="true"><span class="lg-ring"></span>principal <span class="lg-dot"></span>agent <span class="lg-line"></span>duty of loyalty</p>
+    </section>
+
+    <!-- About -->
+    <section class="section light" id="about">
+      <div class="wrap two-col">
+        <div>
+          <p class="kicker">01 / About</p>
+          <h2>A model can be harmless to the public and still fail the person it represents.</h2>
+        </div>
+        <div class="prose">
+          <p>AI agents increasingly act on behalf of people. They spend money, negotiate, and take actions that commit their users to binding transactions. An agent can pass its user's data to a counterparty's agent, or accept an inducement that benefits its operator at the user's expense. General AI safety work does not address this problem.</p>
+          <p>Human institutions manage it through fiduciary duties. Agents that transact for people need technical infrastructure that does the same.</p>
+          <p>This workshop convenes the communities working on pieces of the problem, who today publish in separate venues: agent safety and evaluation, multi-agent systems, economics and mechanism design, HCI, and technology law. The day ends with breakout groups that draft a public research agenda, which we will publish on this site.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topics -->
+    <section class="section dark" id="topics">
+      <div class="wrap">
+        <p class="kicker">02 / Topics</p>
+        <h2>Topics of interest</h2>
+        <p class="lede">We are interested in the technical, economic, and legal infrastructure that keeps AI agents loyal to the people they represent. The call for papers will list topics in detail.</p>
+        <ol class="topics">
+          <li><span class="num">01</span><h3>Permission management</h3><p>Authority limits, policy gates, separating proposal from execution, and audit trails that enforce loyalty from outside the model.</p></li>
+          <li><span class="num">02</span><h3>Identity and authenticated delegation</h3><p>Agent identity, authorized delegation, and how delegation protocols can carry loyalty guarantees.</p></li>
+          <li><span class="num">03</span><h3>Evaluation and measurement</h3><p>Benchmarks for alignment to the user in economic delegation: multi-step transactions, counterparty inducements, and loyalty decay over long horizons.</p></li>
+          <li><span class="num">04</span><h3>Multi-agent delegation</h3><p>What happens when one principal's agent deals with another's.</p></li>
+          <li><span class="num">05</span><h3>Transaction and disclosure standards</h3><p>Records and disclosures that let principals and counterparties verify what an agent did and on whose behalf.</p></li>
+          <li><span class="num">06</span><h3>Conflicts of interest</h3><p>Platform nudges, operator incentives, advertising-funded agents, and undisclosed service degradation, and how to detect and govern them.</p></li>
+          <li><span class="num">07</span><h3>Law and governance</h3><p>What fiduciary law, consumer-protection enforcement, and risk frameworks imply for agent design, and which technical properties regulators need agents to have.</p></li>
+          <li><span class="num">08</span><h3>Economic perspectives</h3><p>Preference elicitation, market structure for agent intermediaries, and the competition and consumer-protection economics of transacting agents.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Agenda -->
+    <section class="section light" id="agenda">
+      <div class="wrap">
+        <p class="kicker">03 / Agenda</p>
+        <div class="head-row">
+          <h2>Draft agenda</h2>
+          <span class="tag tag-draft">Draft, subject to change</span>
+        </div>
+        <p class="lede">One day with two invited talks, two sessions of contributed talks, lightning talks and posters, a panel, and closing breakouts. Times are placeholders until AAAI assigns our day and room.</p>
+        <ol class="agenda">
+          <li><time>9:00</time><div><h3>Opening remarks</h3><p>Welcome from the organizers and the plan for the day.</p></div><span class="tag">Welcome</span></li>
+          <li><time>9:15</time><div><h3>Invited talk: the technical view</h3><p>Speaker to be announced.</p></div><span class="tag tag-talk">Invited</span></li>
+          <li><time>9:45</time><div><h3>Contributed talks, session one</h3><p>Talks selected from accepted papers.</p></div><span class="tag tag-papers">Papers</span></li>
+          <li class="break"><time>10:45</time><div><h3>Coffee and posters</h3></div><span class="tag">Break</span></li>
+          <li><time>11:15</time><div><h3>Invited talk: the law and policy view</h3><p>Speaker to be announced.</p></div><span class="tag tag-talk">Invited</span></li>
+          <li><time>11:45</time><div><h3>Lightning talks</h3><p>Short presentations of accepted papers, continued at the poster sessions.</p></div><span class="tag tag-papers">Papers</span></li>
+          <li class="break"><time>12:30</time><div><h3>Lunch</h3></div><span class="tag">Break</span></li>
+          <li><time>14:00</time><div><h3>Contributed talks, session two</h3><p>Talks selected from accepted papers.</p></div><span class="tag tag-papers">Papers</span></li>
+          <li><time>15:00</time><div><h3>Panel: loyalty in deployed agents</h3><p>Researchers, industry agent builders, and a regulator or legal scholar. Panelists to be announced.</p></div><span class="tag tag-panel">Panel</span></li>
+          <li class="break"><time>16:00</time><div><h3>Coffee and posters</h3></div><span class="tag">Break</span></li>
+          <li><time>16:30</time><div><h3>Breakout groups</h3><p>Three groups: benchmarks, transaction and disclosure standards, and governance mechanisms.</p></div><span class="tag tag-breakout">Breakouts</span></li>
+          <li><time>17:30</time><div><h3>Report-outs and closing</h3><p>Each group reports back. The notes become a public research agenda, published here after the workshop.</p></div><span class="tag tag-breakout">Breakouts</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Speakers -->
+    <section class="section dark" id="speakers">
+      <div class="wrap">
+        <p class="kicker">04 / Speakers</p>
+        <h2>Invited speakers</h2>
+        <p class="lede">We are confirming invited speakers and panelists, and will announce them here.</p>
+        <ul class="speakers">
+          <li><div class="avatar ghost" aria-hidden="true">?</div><h3>To be announced</h3><p>Invited talk, technical</p></li>
+          <li><div class="avatar ghost" aria-hidden="true">?</div><h3>To be announced</h3><p>Invited talk, law and policy</p></li>
+          <li><div class="avatar ghost" aria-hidden="true">?</div><h3>To be announced</h3><p>Panel on loyalty in deployed agents</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CFP -->
+    <section class="section light" id="cfp">
+      <div class="wrap">
+        <p class="kicker">05 / Call for papers</p>
+        <div class="cfp-card">
+          <div class="cfp-main">
+            <span class="status-pill on-light"><span class="pulse" aria-hidden="true"></span>Coming soon</span>
+            <h2>The call for papers will be posted here shortly.</h2>
+            <p>We will invite research papers, position papers, and law and policy contributions. Submission instructions, page limits, and the submission link will appear on this page when the call opens.</p>
+            <p class="small">Presentations are in person, so at least one author of each accepted paper will need to present in Montréal.</p>
+          </div>
+          <div class="cfp-dates">
+            <h3>Expected dates</h3>
+            <ol class="dates">
+              <li><time datetime="2026-11-20">Nov 20, 2026</time><span>Papers due</span></li>
+              <li><time datetime="2026-12-02">Dec 2, 2026</time><span>Notifications to authors</span></li>
+              <li><time datetime="2027-01-15">Jan 15, 2027</time><span>Camera-ready due</span></li>
+              <li><time datetime="2027-02-22">Feb 22 or 23, 2027</time><span>Workshop in Montréal (day assigned by AAAI)</span></li>
+            </ol>
+            <p class="small">Dates will be confirmed in the call for papers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organizers -->
+    <section class="section dark" id="organizers">
+      <div class="wrap">
+        <p class="kicker">06 / Organizers</p>
+        <h2>Organizing committee</h2>
+        <ul class="people">
+          <li><div class="avatar" aria-hidden="true">UG</div><h3>Utsav Gupta</h3><p class="role">Workshop chair</p><p>Stanford University</p></li>
+          <li><div class="avatar" aria-hidden="true">DG</div><h3>Dazza Greenwood</h3><p>CodeX, Stanford Law School</p></li>
+          <li><div class="avatar" aria-hidden="true">AH</div><h3>Andreas Haupt</h3><p>Harvard Kennedy School, Schmidt Sciences, and Stanford Digital Economy Lab</p></li>
+          <li><div class="avatar" aria-hidden="true">SP</div><h3>Alex "Sandy" Pentland</h3><p>MIT Media Lab; Stanford HAI and Digital Economy Lab</p></li>
+          <li><div class="avatar" aria-hidden="true">EP</div><h3>Elizabeth Porter</h3><p>Stanford Digital Economy Lab</p></li>
+        </ul>
+        <p class="lede after">The program committee will be listed here once it is confirmed.</p>
+      </div>
+    </section>
+
+    <!-- Attend -->
+    <section class="section light" id="attend">
+      <div class="wrap two-col">
+        <div>
+          <p class="kicker">07 / Attend</p>
+          <h2>Registration details are coming.</h2>
+        </div>
+        <div class="prose">
+          <p>The workshop is open to AAAI-27 attendees. We welcome researchers and practitioners interested in loyal AI agents, from AI, economics, HCI, and law.</p>
+          <p>Registration runs through AAAI-27. We will link to it here when it opens.</p>
+          <p>Questions in the meantime? Write to <a href="mailto:vastu@stanford.edu?subject=Loyal%20Agents%20workshop%20at%20AAAI-27">vastu@stanford.edu</a>.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-brand">LoyalAgents</p>
+        <p>Who Does Your AI Agent Work For? A Workshop on Loyal Agents, held at AAAI-27.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Utsav Gupta, workshop chair<br><a href="mailto:vastu@stanford.edu">vastu@stanford.edu</a></p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <p><a href="https://loyalagents.org">Loyal Agents initiative</a><br><a href="https://aaai.org/conference/aaai/aaai-27/">AAAI-27</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
