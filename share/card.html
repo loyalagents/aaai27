@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Source for share-card.png, the 1200x630 image shown when the site is shared. Rebuild with share/render.sh. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=block">
+  <style>
+    :root {
+      --ink: #1b1b1b;
+      --green: #4ade80;
+      --amber: #f6b443;
+      --sans: "Space Grotesk", sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; }
+    body {
+      position: relative;
+      background: var(--ink);
+      color: #fff;
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    .glow {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(520px 420px at 930px 300px, rgba(246, 180, 67, 0.10), transparent 70%),
+        radial-gradient(380px 300px at 1060px 520px, rgba(74, 222, 128, 0.08), transparent 70%);
+    }
+    svg.art { position: absolute; inset: 0; }
+    .shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(27, 27, 27, 0.97) 0%, rgba(27, 27, 27, 0.85) 46%, rgba(27, 27, 27, 0) 72%);
+    }
+    .content {
+      position: absolute;
+      left: 72px;
+      top: 64px;
+      bottom: 60px;
+      width: 720px;
+      display: flex;
+      flex-direction: column;
+    }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 19px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .eyebrow .sep { color: #4a4a4a; margin: 0 10px; }
+    h1 {
+      margin-top: 26px;
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 0.96;
+      letter-spacing: -0.045em;
+    }
+    h1 .accent { color: var(--amber); }
+    .sub {
+      margin-top: 22px;
+      font-size: 25px;
+      font-weight: 500;
+      color: #cfcfcf;
+      letter-spacing: -0.005em;
+    }
+    .cta {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .pill {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 24px;
+      border-radius: 6px;
+      background: var(--amber);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .pill .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--ink);
+    }
+    .deadline {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .deadline small {
+      display: block;
+      margin-top: 2px;
+      font-family: var(--mono);
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #a8a8a8;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+
+  <!-- principals (rings) tethered to their agents (green dots); dashed lines are agents dealing with each other -->
+  <svg class="art" width="1200" height="630" viewBox="0 0 1200 630">
+    <g stroke="rgba(255,255,255,0.32)" stroke-width="1.5" stroke-dasharray="4 8" fill="none">
+      <line x1="920" y1="192" x2="1012" y2="252"/>
+      <line x1="1012" y1="252" x2="968" y2="402"/>
+      <line x1="968" y1="402" x2="1094" y2="442"/>
+      <line x1="920" y1="192" x2="835" y2="290"/>
+      <line x1="835" y1="290" x2="968" y2="402"/>
+      <line x1="1094" y1="442" x2="1050" y2="535"/>
+      <line x1="1012" y1="252" x2="1135" y2="152"/>
+      <line x1="1050" y1="535" x2="968" y2="402"/>
+    </g>
+    <g stroke="#f6b443" stroke-width="2.5" stroke-linecap="round">
+      <line x1="800" y1="92" x2="920" y2="192"/>
+      <line x1="1112" y1="300" x2="1012" y2="252"/>
+      <line x1="850" y1="522" x2="968" y2="402"/>
+      <line x1="1150" y1="578" x2="1094" y2="442"/>
+      <line x1="745" y1="350" x2="835" y2="290"/>
+      <line x1="960" y1="586" x2="1050" y2="535"/>
+      <line x1="1040" y1="66" x2="1135" y2="152"/>
+    </g>
+    <g fill="#1b1b1b" stroke="#ffffff" stroke-width="2.5">
+      <circle cx="800" cy="92" r="11"/>
+      <circle cx="1112" cy="300" r="11"/>
+      <circle cx="850" cy="522" r="11"/>
+      <circle cx="1150" cy="578" r="11"/>
+      <circle cx="745" cy="350" r="11"/>
+      <circle cx="960" cy="586" r="11"/>
+      <circle cx="1040" cy="66" r="11"/>
+    </g>
+    <g fill="rgba(74,222,128,0.18)">
+      <circle cx="920" cy="192" r="19"/>
+      <circle cx="1012" cy="252" r="19"/>
+      <circle cx="968" cy="402" r="19"/>
+      <circle cx="1094" cy="442" r="19"/>
+      <circle cx="835" cy="290" r="19"/>
+      <circle cx="1050" cy="535" r="19"/>
+      <circle cx="1135" cy="152" r="19"/>
+    </g>
+    <g fill="#4ade80">
+      <circle cx="920" cy="192" r="7.5"/>
+      <circle cx="1012" cy="252" r="7.5"/>
+      <circle cx="968" cy="402" r="7.5"/>
+      <circle cx="1094" cy="442" r="7.5"/>
+      <circle cx="835" cy="290" r="7.5"/>
+      <circle cx="1050" cy="535" r="7.5"/>
+      <circle cx="1135" cy="152" r="7.5"/>
+    </g>
+  </svg>
+
+  <div class="shade"></div>
+
+  <div class="content">
+    <p class="eyebrow">AAAI-27 Workshop<span class="sep">/</span>Montréal<span class="sep">/</span>Feb 2027</p>
+    <h1>Who does your<br>AI agent<br><span class="accent">work for?</span></h1>
+    <p class="sub">A workshop on loyal agents</p>
+    <div class="cta">
+      <div class="pill"><span class="dot"></span>Call for papers open</div>
+      <p class="deadline">Submit by Nov 20, 2026<small>on OpenReview</small></p>
+    </div>
+  </div>
+</body>
+</html>
