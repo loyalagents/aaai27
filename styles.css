@@ -457,6 +457,25 @@ h3 { font-size: 20px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01
 .cfp-main h2 { margin-top: 24px; font-size: clamp(28px, 3.2vw, 42px); }
 .cfp-main p { margin-top: 20px; }
 
+.cfp-main .cfp-submit {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 4px;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.cfp-main .cfp-submit:hover { background: var(--green-deep); }
+.cfp-list { margin-top: 28px; border-top: 1px solid var(--line-on-light); }
+.cfp-list li { padding: 14px 0; border-bottom: 1px solid var(--line-on-light); font-size: 16px; }
+.cfp-list a { color: var(--green-deep); font-weight: 600; }
+
 .cfp-dates { padding: 52px 48px; background: var(--ink); color: var(--white); }
 
 .cfp-dates h3 {
